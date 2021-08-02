@@ -1,0 +1,123 @@
+#Check signature
+gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig
+
+#Keyboard Layout
+ls /usr/share/kbd/keymaps/**/*.map.gz
+
+#Veriffy boot mode
+ls /sys/firmware/efi/efivars
+
+#Internet
+ip link
+Wifi - authenticate to the wireless network using iwctl
+ping archlinux.org
+
+#System clock
+timedatectl set-ntp true
+timedatectl status
+
+#Partition the disks
+fdisk -l
+fdisk /dev/the_disk_to_be_partitioned
+mkfs.vfat /dev/sda1						(EFI Partition)
+mkfs.ext4 /dev/root_partition			(Disk)
+mkswap /dev/swap_partition
+swapon /dev/swap_partition
+ OR
+ lsblk
+ cfdisk
+
+#Mount partition
+mount /dev/root_partitiontition /mnt
+
+#EFI Mount Partition
+mount /dev/sda2 (Disk) /mnt
+mkdir /mnt/boot
+mount /dev/sda1 (EFI) /mnt/boot
+
+#Mirrors
+nano /etc/pacman.d/mirrorlist
+Select the mirrors to be used, remove unecessary one
+
+#Install the base system
+pacstrap /mnt base linux linux-firmware
+
+#Configuration
+genfstab -U /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
+(EFI) bootctl install
+(EFI) cd /boot/
+(EFI) ls -l
+(EFI) cd loader && ls
+(EFI) vim loader.conf
+(INSERT)
+default arch
+timeout 4
+(END)
+(EFI) cd entries/
+(EFI) vim arch.conf
+(INSERT)
+title Archlinux
+linux /vmlinuz-linux
+initrd /initramfs-linux.img
+options root=PARTUUID=<Bunch of number> rw
+(COMMAND) :r !blkid
+(NOTES) Get PARTUUID of /dev/sda2 (DISK)
+
+
+#Time Zone
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+hwclock --systohc
+
+#Localisation
+locale-gen
+touch /etc/locale.conf
+nano /etc/locale.conf
+INSERT
+LANG=en_US.UTF-8
+END
+
+#Keyboard Layout
+/etc/vconsole.conf
+KEYMAP=de-latin1
+
+#Network Configurationon
+nano /etc/hostname
+INSERT
+wilson
+END
+nano /etc/hosts
+INSERT
+127.0.0.1	localhost
+::1			localhost
+127.0.1.1	wilson.localdomain		wilson
+
+#Root password
+passwd
+INSERT your password
+
+#Post-configuration
+pacman -S dhcpcd dhcp
+systemctl enable dhcpcd
+useradd -m wilson
+passwd wilson
+pacman -S sudo
+usermod -aG wheel,audio,video,optical,storage wilson
+groups wilson
+pacman -S vim
+visudo
+UNCOMMENT %wheel ALL=(ALL) ALL
+
+#GRUB
+pacman -S grub
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+exit
+
+#Reboot YAY!
+
+sudo pacman -S xorg
+sudo pacman -S awesome base-devel
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git/
+makepkg -si

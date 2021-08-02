@@ -1,0 +1,49 @@
+#Fix sudo problem first
+Log in as root
+sudo apt install sudo
+usermod -aG sudo <username> && sudo apt update
+
+sudo apt installll git vim xorg xserver-xorg gcc make libxft-dev libxcb1-direv (libx for st)
+sudo apt install python3 python3-pip python-gobject python-dbus libpangocairo-1.0-0 alsa-utils pavucontrol pcmanfm firefox-esr sus-tools pulsemixer htop neofetch
+pip3 install xcffib
+pip3 install --no-cache-dir cairocffi
+
+git clone git://github.com/qtile/qtile.git
+cd qtile/
+pip3 install .
+
+vim .xinitrc 
+INSERT
+feh --bg-scale .wallpapers/1.png &
+xrandr -s 1440x900 &
+qtile start
+
+git clone https://git.suckless.org/dmenu
+mkdir .dwm/ && mv dmenu/ .dwm/
+cd .dwm/dmenu/ && make && sudo make clean install
+
+git clone https://github.com/linuxdabbler/st && cd st && make && sudo make clean install
+
+OPTIONAL
+mkdir -p ~/.local/src
+mv st/ ~/.local/src/
+ln -sf ~/.local/src/st/st /usr/local/bin/
+
+sudo apt install locate fontconfig feh
+locatedd
+
+PULL MY GITHUB NOTES FOR QTILE CONFIG
+PUT THE CONFIG FILE IN
+/home/$USER/.config/qtile/
+
+wget https://github.com/0EFB6/Notes/blob/main/debian-install-scripts/install_nerdfonts.sh
+cd debianian-install-scripts/
+chmod +x *.sh
+./install_nerdfonts.sh
+
+#INSTALL FIREFOX
+https://www.mozilla.org/en-US/firefox/download/thanks/
+mv firefox /usr/bin/
+sudo chown -R $USER /usr/bin/firefox
+cd /usr/bin
+sudo ln -sf /usr/bin/firefox/firefox firefox

@@ -1,0 +1,17 @@
+In Bash
+
+There are several shortcuts key that help speed your command typing!
+
+Ctrl + a = Moves your cursor to the start of the line
+Ctrl + e = Moves it to the end
+Ctrl + u = Remove all the texts before your cursor
+Ctrl + d = Ends a line or delete a character after the cursor
+Ctrl + n = Searches the command history downwards
+Ctrl + p = Searches the command history upwards
+
+Some shortcuts!!!
+!! = reuse the command typed
+eg. 
+apt update
+sudo !! will run sudo apt update
+

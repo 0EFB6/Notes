@@ -1,0 +1,7 @@
+#Install xmonad
+
+Config From https://github.com/Axarva/dotfiles-2.0.git
+
+sudo pacman -Syu feh picom firefox pcmanfm lx-appearance arc-gtk-theme arc-icon-theme
+sudo pacman -Syu base-devel git vim cronie xorg libx11
+sudo pacman -Syu xorg-xrandr xorg-utils xorg-server-utils

@@ -1,0 +1,26 @@
+#Install qtile
+
+pacman -S qtile feh firefox pcmanfm lxappearance arc-gtk-theme arc-icon-theme
+
+(OPTIONAL)
+picom-transparency
+
+pacman -S xorg-server xorg-xinit (Xorg base stuff)
+pacman -S base-devel (base stuff)
+pacman -S pavucontrol dmenu scrot htop neofetch
+
+(NOT RECOMMENDED)
+pacman -S nerd-fonts-symbol (Should work for nerd fonts)
+
+yay nerd-fonts-complete(100% work)
+OR TRY
+yay nerd-fonts-ubuntu-mono
+
+#.xinitrc
+feh --bg-scale .wallpapers/1.png &
+xrandr -s 1440x900 &
+qtile start
+
+#Reference
+git clone https://github.com/linuxdabbler/personal-dot-files.git
+git clone https://github.com/linuxdabbler/wallpapers.git
