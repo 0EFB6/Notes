@@ -1,0 +1,7 @@
+#DWM for Debian
+
+sudo apt install xorg build-essential libx11-dev libxft-dev libxinerama-dev feh
+
+#.xinitrc File
+feh --bg-scale .wallpapers/1.png &
+exec dwm
