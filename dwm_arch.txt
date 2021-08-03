@@ -33,7 +33,7 @@ echo "source ~/.bash_completion/alacritty" >> ~/.bashrc
 
 #.xinitrc file
 #xrandr --output VGA-1 --auto --right-of DP-2
-feh --bg-scale .wallpapers/105.png &
+feh --bg-scale .wallpapers/1.png &
 /usr/bin/ibus-daemon &
 xrandr -s 1440x900 &
 dwmbloacks &
