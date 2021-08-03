@@ -8,6 +8,8 @@ Ctrl + u = Remove all the texts before your cursor
 Ctrl + d = Ends a line or delete a character after the cursor
 Ctrl + n = Searches the command history downwards
 Ctrl + p = Searches the command history upwards
+Ctrl + d = signal bash that there is no more input
+Ctrl + l = redraw the screen
 
 Some shortcuts!!!
 !! = reuse the command typed
@@ -15,3 +17,12 @@ eg.
 apt update
 sudo !! will run sudo apt update
 
+Commands Example
+pushd/popd - put working directory on a stack
+file - determine file type
+whatis - display the on-line manual descriptions
+apropos - search the manual page names and descriptions
+more/less - file perusal filter for crt viewing
+users - print the user names of users currently logged in
+id - print real and effective user and group IDs
+killall - kill processes by name
