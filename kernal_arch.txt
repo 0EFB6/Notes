@@ -21,3 +21,9 @@ sudo mkinitcpio -k FullKernelName -c /etc/mkinitcpio.conf -g /boot/initramfs-You
 
 #Copy System.map
 sudo cp System.map /boot/System.map-YourKernelName
+
+1st Compile
+make
+Start: 23:27:40
+End:23:46:20
+Total:18mins 20sec
