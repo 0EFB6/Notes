@@ -1,0 +1,23 @@
+sudo pacman -S base-devel xmlto kmod inetutils bc libelf
+
+Get kernel from www.kernel.org
+
+mkdir kernal_wilson
+
+dump that in
+
+make mrproper
+make menuconfig (Do ur configuration stuff!!!)
+
+#Then compile the kernal Yay!
+make
+sudo make modules_install 
+
+#Copy the kernel to the boot directory
+sudo cp -v arch/x86/boot/bzImage /boot/vmlinux-YourKernelName
+
+#Make the initial RAM disk
+sudo mkinitcpio -k FullKernelName -c /etc/mkinitcpio.conf -g /boot/initramfs-YourKernelName.img
+
+#Copy System.map
+sudo cp System.map /boot/System.map-YourKernelName
