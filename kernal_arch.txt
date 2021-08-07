@@ -14,7 +14,7 @@ make
 sudo make modules_install 
 
 #Copy the kernel to the boot directory
-sudo cp -v arch/x86/boot/bzImage /boot/vmlinux-YourKernelName
+sudo cp -v arch/x86/boot/bzImage /boot/vmlinuz-YourKernelName
 
 #Make the initial RAM disk
 sudo mkinitcpio -k FullKernelName -c /etc/mkinitcpio.conf -g /boot/initramfs-YourKernelName.img
