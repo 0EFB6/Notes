@@ -117,7 +117,11 @@ exit
 #Reboot YAY!
 
 sudo pacman -S xorg
-sudo pacman -S awesome base-devel
+sudo pacman -S base-devel
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/
 makepkg -si
+
+#Install Applications
+yay zoom cpufreq simplenote simplescreenrecorder brave-bin spotify
+pacman -S gimp vlc dutree keepassxc mupdf mpv libreoffice youtube-dl fcitx firefox pcmanfm discord obs 
