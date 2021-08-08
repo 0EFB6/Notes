@@ -1,6 +1,5 @@
 #Install qtile
-
-pacman -S qtile feh firefox pcmanfm lxappearance arc-gtk-theme arc-icon-theme
+pacman -S qtile 
 
 (OPTIONAL)
 picom-transparency

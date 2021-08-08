@@ -70,6 +70,7 @@ ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
 hwclock --systohc
 
 #Localisation
+nano /etc/locale.gen
 locale-gen
 touch /etc/locale.conf
 nano /etc/locale.conf
@@ -84,13 +85,13 @@ KEYMAP=de-latin1
 #Network Configurationon
 nano /etc/hostname
 INSERT
-wilson
+linux
 END
 nano /etc/hosts
 INSERT
 127.0.0.1	localhost
 ::1			localhost
-127.0.1.1	wilson.localdomain		wilson
+127.0.1.1	linux.localdomain		linux
 
 #Root password
 passwd
@@ -99,11 +100,11 @@ INSERT your password
 #Post-configuration
 pacman -S dhcpcd dhcp
 systemctl enable dhcpcd
-useradd -m wilson
-passwd wilson
+useradd -m linux
+passwd linux
 pacman -S sudo
-usermod -aG wheel,audio,video,optical,storage wilson
-groups wilson
+usermod -aG wheel,audio,video,optical,storage linux
+groups linux
 pacman -S vim
 visudo
 UNCOMMENT %wheel ALL=(ALL) ALL
@@ -116,12 +117,7 @@ exit
 
 #Reboot YAY!
 
-sudo pacman -S xorg
-sudo pacman -S base-devel
+pacman -S base-devel
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/
 makepkg -si
-
-#Install Applications
-yay zoom cpufreq simplenote simplescreenrecorder brave-bin spotify
-pacman -S gimp vlc dutree keepassxc mupdf mpv libreoffice youtube-dl fcitx firefox pcmanfm discord obs 

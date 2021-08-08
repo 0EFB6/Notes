@@ -1,22 +1,12 @@
 For Arch
 
-sudo pacman -S obs-studio pavucontrol alsa-utils pulseaudio-alsa pulemixer
-sudo pacman -S xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk
-sudo pacman -S base-devel git vim
-yay nerd-fonts-mononoki
-yay font-awesome
+sudo pacman -S xorg xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk
 
 #Install Fonts
+yay nerd-fonts-mononoki font-awesome
 sudo pacman -S ttf-hack
 
-
-#dwm
-git clone https://git.suckless.org/dwm
-
-#st Terminal
-git clone https://git.suckless.org/st
-
-#Alacritty Terminal
+#Alacritty Terminal (Optional)
 git clone https://github.com/alacritty/alacritty.git
 curl https://sh.rustup.rs -sSf | sh
 rustup override set stable
@@ -31,7 +21,7 @@ mkdir -p ~/.bash_completion
 cp extra/completions/alacritty.bash ~/.bash_completion/alacritty
 echo "source ~/.bash_completion/alacritty" >> ~/.bashrc
 
-#.xinitrc file
+#.xinitrc file (cp /etc/X11/xinit/xinitrc /home/wilson/.xinitrc)
 #xrandr --output VGA-1 --auto --right-of DP-2
 feh --bg-scale .wallpapers/1.png &
 /usr/bin/ibus-daemon &
@@ -44,29 +34,21 @@ exec dwm
 Xcursor.theme: Adwaita
 Xcursor.size: 52
 
-#In st folder
-sudo make clean install
-
-#In dwm folder
-sudo make clean install
-
-vim .bash_profile
+#.bash_profile
 INSERT startx
-
-
-#Background Image
-sudo pacman -S feh
-
-#.xinitrc
-cp /etc/X11/xinit/xinitrc /home/wilson/.xinitrc
 
 #.bashrc
 [[ $(fgconsole 2>/dev/null == 1 ]] && exec startx --vt1
 
-#Install Wilson Config
-git clone https://github.com/OEFB6/DWM.git
-git clone https://github.com/OEFB6/ST.git
-git clone https://github.com/OEFB6/DMENU.git
-git clone https://github.com/OEFB6/DWMBLOCKS.git
-git clone https://github.com/OEFB6/SLOCK.git
-git clone https://github.com/0EFB6/Notes.git
+#Grab dwm and st from suckless.org
+git clone https://git.suckless.org/dwm
+git clone https://git.suckless.org/st
+
+#Install Wilson Config (Recommended)
+git clone https://github.com/OEFB6/dwm.git
+git clone https://github.com/OEFB6/st.git
+git clone https://github.com/OEFB6/dmenu.git
+git clone https://github.com/OEFB6/dwmbloacks.git
+git clone https://github.com/OEFB6/slock.git
+git clone https://github.com/0EFB6/wallpapers.git
+git clone https://github.com/0EFB6/notes.git
