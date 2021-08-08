@@ -5,7 +5,7 @@ char *externalpipe_sigusr1[] = {"/bin/sh", "-c", "externalpipe_buffer.sh st_stri
  * appearance
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Monospace:pixelsize=14:antialias=true:autohint=true";
+static char *font = "Monospace:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
