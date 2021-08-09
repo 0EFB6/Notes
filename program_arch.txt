@@ -1,7 +1,7 @@
 Programs to install on Arch 
 
 # Pacman
-sudo pacman -S obs-studio pavucontrol alsa-utils pulseaudio-alsa pulemixer discord pcmanfm firefox youtube-dl libreoffice mupdf mpv vlc keepassxc gimp simplescreenrecorder feh htop neofetch nload lm_sensors mlocate arc-gtk-theme arc-icon-theme scrot 
+sudo pacman -S obs-studio pavucontrol alsa-utils pulseaudio-alsa pulemixer discord pcmanfm firefox youtube-dl libreoffice mupdf mpv vlc keepassxc gimp simplescreenrecorder feh htop neofetch nload lm_sensors mlocate arc-gtk-theme arc-icon-theme scrot  
 
 >lxappearance (Optional)
 sudo pacman -S lxappearance
