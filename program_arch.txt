@@ -7,7 +7,7 @@ sudo pacman -S obs-studio pavucontrol alsa-utils pulseaudio-alsa pulemixer disco
 sudo pacman -S lxappearance
 
 >virt-manager (Optional)
-sudo pacman -S qemu virt-manager ebtables
+sudo pacman -S qemu virt-manager ebtables dnsmasq
 sudo systemctl enable libvirtd
 sudo systemctl start libvirtd
 sudo usermod -G libvirt -a linux
