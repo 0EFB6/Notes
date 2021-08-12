@@ -6,6 +6,12 @@ sudo pacman -S obs-studio pavucontrol alsa-utils pulseaudio-alsa pulemixer disco
 >lxappearance (Optional)
 sudo pacman -S lxappearance
 
+>virt-manager (Optional)
+sudo pacman -S qemu virt-manager ebtables
+sudo systemctl enable libvirtd
+sudo systemctl start libvirtd
+sudo usermod -G libvirt -a linux
+
 >Language support for Chinese
 sudo pacman -S fcitx fcitx-configtool fcitx-sunpinyin fcitx-qt5 fxitx-im
 !You may install fcitx-googlepinyin or others for extra support
