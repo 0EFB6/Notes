@@ -1,0 +1,20 @@
+Programs to install on Debian
+
+# apt
+sudo apt install 
+
+>lxappearnace (Optional)
+sudo apt install lxappearnace
+
+>virt-manager (Optional)
+sudo apt install qemu-kvm libvirt-clients libvirt-daemon libvirt-daemon-system bridge-utils virtinst virt-manager 
+sudo systemctl enable libvirtd
+sudo systemctl start libvirtd
+sudo adduser $USER libvirt
+sudo adduser $USER libvirt-qemu
+
+>Language support for Chinese
+
+>Fonts for Chinese
+
+
