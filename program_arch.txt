@@ -3,6 +3,15 @@ Programs to install on Arch
 # Pacman
 sudo pacman -S obs-studio pavucontrol alsa-utils pulseaudio-alsa pulemixer discord pcmanfm firefox youtube-dl libreoffice mupdf mpv vlc keepassxc gimp simplescreenrecorder feh htop neofetch nload lm_sensors mlocate arc-gtk-theme arc-icon-theme scrot  
 
+>xorg
+sudo pacman -S xorg xorg-xinit
+
+>Essential
+sudo pacman -S base-devel
+
+>Compositor
+sudo pacman -S picom 
+
 >lxappearance (Optional)
 sudo pacman -S lxappearance
 
@@ -20,6 +29,9 @@ sudo pacman -S fcitx fcitx-configtool fcitx-sunpinyin fcitx-qt5 fxitx-im
 >Fonts for Chinese
 sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts 
 yay noto-fonts-sc ttf-ms-win8-zh_cn ttf-ms-win10-zh_cn
+
+>Fonts
+sudo pacman -S nerd-fonts-mononoki
 
 #Yay
 yay zoom simplenote brave-bin spotify dutree
