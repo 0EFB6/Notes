@@ -1,0 +1,14 @@
+Securing Router
+
+1) Firewall On (SPI Firewall etc.)
+2) Respond to Pings from LAN & WAN (Recommended to be turned off)
+3) NAT Forwarding/Port Forwarding (Go check & Turn off uneccessary port)
+4) System Administration
+	- Turn off Remote Management
+5) Change router username and password
+6) Update router firmware
+7) Wireless Setting
+	- WPA/WPA-2 security
+	- Change SSID
+	- Use secure password
+8) Constanly monitoring
