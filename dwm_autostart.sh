@@ -2,6 +2,7 @@
 
 #obs &
 #alacritty &
-firefox-esr &
-discord &
+#firefox &
+#discord &
 #brave-browser-stable &
+cpupower-gui &
