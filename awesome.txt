@@ -1,0 +1,4 @@
+Install Awesome WM
+
+Dependencies:
+awesome 

@@ -1,0 +1,4 @@
+Installing BSPWM
+
+Dependencies required:
+bspwm sxhkd polybar dmenu picom feh 
