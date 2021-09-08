@@ -5,6 +5,7 @@ sudo pacman -S obs-studio pavucontrol alsa-utils pulseaudio-alsa pulemixer disco
 
 >xorg
 sudo pacman -S xorg xorg-xinit
+sudo pacman -S xzoom xorg-xmag
 
 >Essential
 sudo pacman -S base-devel
