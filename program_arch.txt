@@ -34,5 +34,19 @@ yay noto-fonts-sc ttf-ms-win8-zh_cn ttf-ms-win10-zh_cn
 >Fonts
 sudo pacman -S nerd-fonts-mononoki
 
+>KDE Plasma Desktop Environment
+sudo pacman -S plasma-Desktop
+INSERT "exec startkde" to .xiitrc file
+sudo pacman -S breeze-gtk breeze-kde4 kde-gtk-config
+sudo pacman -S kdeplasma-addons 
+sudo pacman -S networkmanager plasma-nm (Network Manager)
+sudo systemctl enable NetworkManager
+sudo pacman -S plasma-pa (Volume Manager)
+sudo pacman -S kinfocenter kcolorchooser kruler redshift kompare ktorrent
+yay plasma5-applets-redshift-control-git
+
+>Key Packages From LINUX AVERAGE USER
+sudo pacman -S adobe-source-sans-pro-fonts aspell-Environment enchant gst-libav gst-plugins-good hunspell-en icedtea-web jre8-openjdk languagetool libmythes mythes-en pkgstats ttf-anonymous-pro ttf-bitstream-vera ttf-dejavu ttf-droid ttf-gentium ttf-liberation ttf-ubuntu-fornt-family
+
 #Yay
 yay zoom simplenote brave-bin spotify dutree
