@@ -37,7 +37,7 @@ sudo pacman -S nerd-fonts-mononoki
 >KDE Plasma Desktop Environment
 sudo pacman -S plasma-Desktop
 INSERT "exec startkde" to .xiitrc file
-sudo pacman -S breeze-gtk breeze-kde4 kde-gtk-config
+sudo pacman -S breeze-gtk kde-gtk-config
 sudo pacman -S kdeplasma-addons 
 sudo pacman -S networkmanager plasma-nm (Network Manager)
 sudo systemctl enable NetworkManager
