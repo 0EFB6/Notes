@@ -1,0 +1,6 @@
+Wifi Driver
+
+TL-WN823N
+
+Arch Linux
+yay rtl8192eu
