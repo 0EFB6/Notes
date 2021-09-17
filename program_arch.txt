@@ -24,7 +24,7 @@ sudo usermod -G libvirt -a linux
 sudo pacman -S edk2-ovmf (UEFI support)
 
 >Language support for Chinese
-sudo pacman -S fcitx fcitx-configtool fcitx-sunpinyin fcitx-qt5 fxitx-im
+sudo pacman -S fcitx fcitx-configtool fcitx-sunpinyin fcitx-qt5 
 !You may install fcitx-googlepinyin or others for extra support
 
 >Fonts for Chinese
