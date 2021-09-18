@@ -45,6 +45,9 @@ sudo pacman -S plasma-pa (Volume Manager)
 sudo pacman -S kinfocenter kcolorchooser kruler redshift kompare ktorrent
 yay plasma5-applets-redshift-control-git
 
+>System Monitoring App
+sudo pacman -S bpytop
+
 >Key Packages From LINUX AVERAGE USER
 sudo pacman -S adobe-source-sans-pro-fonts aspell-Environment enchant gst-libav gst-plugins-good hunspell-en icedtea-web jre8-openjdk languagetool libmythes mythes-en pkgstats ttf-anonymous-pro ttf-bitstream-vera ttf-dejavu ttf-droid ttf-gentium ttf-liberation ttf-ubuntu-fornt-family
 
