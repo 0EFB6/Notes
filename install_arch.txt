@@ -1,3 +1,5 @@
+1) Normal Way Method
+
 #Check signature
 gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig
 
@@ -64,7 +66,6 @@ options root=PARTUUID=<Bunch of number> rw
 (COMMAND) :r !blkid
 (NOTES) Get PARTUUID of /dev/sda2 (DISK)
 
-
 #Time Zone
 ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
 hwclock --systohc
@@ -121,3 +122,12 @@ pacman -S base-devel
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/
 makepkg -si
+
+
+
+
+
+2) Lazy Method
+pacman -Sy
+pacman -S wget pacman-contrib
+wget archfi.sf.net/archfi
