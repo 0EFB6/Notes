@@ -26,6 +26,7 @@ sudo pacman -S edk2-ovmf (UEFI support)
 
 >Language support for Chinese
 sudo pacman -S fcitx fcitx-configtool fcitx-sunpinyin fcitx-qt5 
+sudo pacman -S kcm-fcitx (For KDE Plasma)
 !You may install fcitx-googlepinyin or others for extra support
 
 >Fonts for Chinese
