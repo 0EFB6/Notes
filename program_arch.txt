@@ -1,7 +1,8 @@
 Programs to install on Arch 
 
 # Pacman
-sudo pacman -S obs-studio pavucontrol alsa-utils pulseaudio-alsa pulemixer discord pcmanfm firefox youtube-dl libreoffice mupdf mpv vlc keepassxc gimp simplescreenrecorder feh htop neofetch nload lm_sensors mlocate arc-gtk-theme arc-icon-theme scrot  
+sudo pacman -S obs-studio pavucontrol alsa-utils pulseaudio-alsa pulsemixer discord pcmanfm firefox youtube-dl libreoffice mupdf mpv vlc keepassxc gimp  feh htop neofetch nload lm_sensors mlocate scrot  
+sudo pacman -S simplescreenrecorder arc-gtk-theme arc-icon-theme
 
 >xorg
 sudo pacman -S xorg xorg-xinit
@@ -29,10 +30,10 @@ sudo pacman -S fcitx fcitx-configtool fcitx-sunpinyin fcitx-qt5
 
 >Fonts for Chinese
 sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts 
-yay noto-fonts-sc ttf-ms-win8-zh_cn ttf-ms-win10-zh_cn
+yay -S noto-fonts-sc ttf-ms-win10-zh_cn
 
 >Fonts
-sudo pacman -S nerd-fonts-mononoki
+yay -S nerd-fonts-mononoki
 
 >KDE Plasma Desktop Environment
 sudo pacman -S plasma-Desktop
@@ -43,7 +44,7 @@ sudo pacman -S networkmanager plasma-nm (Network Manager)
 sudo systemctl enable NetworkManager
 sudo pacman -S plasma-pa (Volume Manager)
 sudo pacman -S kinfocenter kcolorchooser kruler redshift kompare ktorrent
-yay plasma5-applets-redshift-control-git
+yay -S plasma5-applets-redshift-control-git
 
 >System Monitoring App
 sudo pacman -S bpytop
@@ -52,4 +53,4 @@ sudo pacman -S bpytop
 sudo pacman -S adobe-source-sans-pro-fonts aspell-Environment enchant gst-libav gst-plugins-good hunspell-en icedtea-web jre8-openjdk languagetool libmythes mythes-en pkgstats ttf-anonymous-pro ttf-bitstream-vera ttf-dejavu ttf-droid ttf-gentium ttf-liberation ttf-ubuntu-fornt-family
 
 #Yay
-yay zoom simplenote brave-bin spotify dutree
+yay -S zoom simplenote brave-bin spotify dutree
