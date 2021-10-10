@@ -55,3 +55,13 @@ sudo pacman -S adobe-source-sans-pro-fonts aspell-Environment enchant gst-libav 
 
 #Yay
 yay -S zoom simplenote brave-bin spotify dutree
+
+#Autologin TTY
+systemctl edit getty@tty1
+
+INSERT ON LINE 4
+[Service]
+ExecStart=
+ExecStart=-/usr/bin/agetty --autologin linux --noclear %I 38400 linux
+
+systemctl enable getty@tty1.service
